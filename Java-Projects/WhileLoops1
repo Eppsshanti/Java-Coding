@@ -1,0 +1,34 @@
+public class WhileLoopExamples {
+
+    public static void main(String[] args) {
+                int diceRoll = -1;
+            while (diceRoll != 6) {
+                diceRoll = rollDice();
+                System.out.println(diceRoll);
+            }
+        
+
+        int randomNumbers = -1;
+        while (randomNumbers <= 90) {
+            randomNumbers = generateRandomNumber();
+            System.out.println(randomNumbers);
+        }
+      
+
+        int doubleNum = generateRandomNumber();
+        while (doubleNum <= 1000) {
+            doubleNum = doubleNum * 2;
+            System.out.println(doubleNum);
+        }
+    }
+
+    // Function to simulate rolling a dice (returns a random integer between 1 and 6)
+    public static int rollDice() {
+        return (int) (Math.random() * 6) + 1;
+    }
+
+    // Function to generate a random integer between 1 and 100
+    public static int generateRandomNumber() {
+        return (int) (Math.random() * 100) + 1;
+    }
+}
